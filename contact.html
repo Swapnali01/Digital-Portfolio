@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Contact Me - Swapnali Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Swapnali</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="new.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="certifications.html">Certificate</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contact.html">Contact Us</a></div>
+                <style>
+                    .nav-container {
+                        padding: 10px 20px;
+                    }
+                    
+                    .nav-container .logo span {
+                        font-size: 1.2rem;
+                    }
+                    
+                    .nav-container .links .link a {
+                        font-size: 0.9rem;
+                        padding: 5px 10px;
+                    }
+                    
+                    .nav-container .links .contact-btn a {
+                        padding: 5px 15px;
+                    }
+                    
+                    .hamburg {
+                        font-size: 1.2rem;
+                    }
+                    
+                    .dropdown .links a {
+                        font-size: 0.9rem;
+                        padding: 8px 0;
+                    }
+                </style>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="new.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="contact.html">Contact Me</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Contact <span>Me</span></h1>
+                
+                <div class="contact-form" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+                    <form style="display: flex; flex-direction: column; gap: 10px;">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                    <a href="https://github.com/Swapnali01"><i class="fa-brands fa-github"></i></a>
+                    
+                    <a href="https://www.linkedin.com/in/swapnali-kolpe-19952533b/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+    </script>
+</body>
+</html>
